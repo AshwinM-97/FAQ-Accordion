@@ -1,0 +1,81 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+html,
+body {
+  height: 100%;
+  width: 100%;
+}
+
+.main {
+  min-height: 100vh;
+  width: 100%;
+}
+
+.header {
+  height: 40vh;
+  width: 100%;
+  background: url(assets/images/background-pattern-desktop.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+.footer {
+  background: hsl(275, 100%, 97%);
+  width: 100%;
+  min-height: 60vh;
+}
+
+.box {
+  min-height: 400px;
+  width: 600px;
+  background: hsl(0, 0%, 100%);
+}
+
+.title {
+  color: hsl(292, 42%, 14%);
+}
+
+.accordion-button:not(.collapsed) {
+  background-color: transparent;
+  color: hsl(292, 100%, 46%);
+}
+
+.accordion-button:focus {
+  box-shadow: none;
+}
+
+.accordion-button::after {
+  background-image: url("assets/images/icon-plus.svg");
+  width: 40px;
+  height: 40px;
+  background-size: contain;
+}
+
+.accordion-button:not(.collapsed)::after {
+  background-image: url("assets/images/icon-minus.svg");
+}
+
+@media (max-width: 600px) {
+  .header {
+    background: url(assets/images/background-pattern-mobile.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+  }
+  .box {
+    min-height: 200px;
+    width: 325px;
+    top: 55% !important;
+  }
+  .title > img {
+    height: 35px;
+  }
+}
